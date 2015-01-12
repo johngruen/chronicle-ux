@@ -1,0 +1,77 @@
+.is-hidden {
+  display: none;
+}
+
+.is-succcess {
+  color: $success;
+}
+
+.is-warning {
+  color: $warning;
+}
+
+.is-faded {
+  opacity: .85;
+  transition: all 1000ms;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOutUp {
+  animation: fadeOutUp 100ms forwards;
+  //display: none;
+}
+
+@mixin is-scale-state-machine() {
+  transition: all $fast;
+  &:active {
+    transform: scale(1.05);
+  }
+}
+
+@mixin is-bg-state-machine($color, $reverse) {
+  @if $reverse {
+      color: $white;
+    }
+  background: $color;
+  transition: all $fast;
+  &:hover,
+  &:focus {
+    background: darken($color, 5%);
+  }
+  &:active {
+    background: lighten($color, 5%);
+  }
+}
+
+@mixin is-hover-bg-state-machine($color, $reverse) {
+
+  opacity: .7;
+  transition: all $fast;
+  &:hover {
+    opacity: 1;
+    background: $color;
+    @if $reverse {
+      color: $white;
+    }
+  }
+  &:active {
+    background: darken($color, 5%);
+  }
+}
+
+@mixin is-bs-state-machine() {
+  transition: all $medium;
+  &:hover {
+    //transform: scale(1.01);
+    box-shadow: 0 0 3px $middle-grey;
+  }
+}
+

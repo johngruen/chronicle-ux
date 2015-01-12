@@ -1,0 +1,33 @@
+#main-navigation {
+  padding: 10px;
+
+  h1 {
+    flex: 1;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    flex: 6;
+    font-size: 12px;
+
+    ul {
+      display: flex;
+      flex: 1;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        align-content: center;
+        flex-basis: 100px;
+        display: flex;
+
+        a {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

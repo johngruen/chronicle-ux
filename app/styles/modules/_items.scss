@@ -1,0 +1,54 @@
+//generic item properties
+.item {
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  @include is-bs-state-machine();
+}
+
+//generic sub-item properties
+.item-sub-image {
+  overflow: hidden;
+  background: $middle-grey;
+}
+
+.item-sub-text {
+  flex: 1;
+  border-right: 1px dotted $light-grey;
+}
+
+
+//generic full item properties
+.item-full {
+  background: $white;
+  border-radius: $default-border-radius;
+  margin-bottom: $default-gap;
+}
+
+// specific types of full item
+.item-default-size {
+  height: $quad-box;
+  .item-sub-image {
+    width: $quad-box;
+  }
+}
+
+.item-double-size {
+  height: $octo-box;
+  .item-sub-image {
+    width: $octo-box;
+  }
+}
+
+.item-half-size {
+  height: $double-box;
+  .item-sub-image {
+    width: $double-box;
+  }
+}
+
+
+//generic compressed item properties
+.item-compressed {
+
+}

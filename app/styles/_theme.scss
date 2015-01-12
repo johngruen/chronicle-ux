@@ -1,0 +1,14 @@
+html, body {
+  color: $middle-grey;
+}
+
+.dark {
+  background: $dark-grey;
+  * {
+    color: white;
+  }
+}
+
+a {
+  color: $primary !important;
+}

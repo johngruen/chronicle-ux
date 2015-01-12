@@ -1,0 +1,32 @@
+.button {
+  min-height: $default-box;
+  border: none;
+  min-width: $double-box;
+  padding: 0 $default-gap;
+  @include is-scale-state-machine();
+}
+
+.button-big {
+  min-height: $double-box;
+  font-size: 24px;
+  padding: 0 $double-gap;
+}
+
+.button-group {
+  display: flex;
+  .button {
+     @include is-bg-state-machine($light-grey, false);
+  }
+}
+
+.button-default {
+  @include is-bg-state-machine($light-grey, false);
+}
+
+.button-warn {
+  @include is-bg-state-machine($warning, true);  
+}
+
+.button-primary {
+  @include is-bg-state-machine($primary, true);  
+}

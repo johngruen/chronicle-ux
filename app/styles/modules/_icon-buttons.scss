@@ -1,0 +1,50 @@
+.icon-button {
+  display: flex;
+  width: $default-box; 
+  height: $default-box;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  i {
+    position: relative;
+    top: 1px;
+  }
+}
+
+
+.icon-button-big {
+  width: $double-box;
+  height: $double-box;
+  i {
+    font-size: 24px;
+  }
+}
+
+.icon-button-group {
+  display: flex;
+}
+
+.icon-button-default {
+  @include is-hover-bg-state-machine($light-grey, false);
+}
+
+.icon-button-warn {
+  @include is-hover-bg-state-machine($warning, true);
+}
+
+.icon-button-primary {
+  @include is-hover-bg-state-machine($primary, true);
+}
+
+.icon-button-alpha {
+  @include is-hover-bg-state-machine($transparent-black, true);
+}
+
+.icon-button-facebook {
+  @include is-hover-bg-state-machine($facebook-blue, true);
+}
+
+.icon-button-twitter {
+  @include is-hover-bg-state-machine($twitter-blue, true);
+}

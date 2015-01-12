@@ -1,0 +1,15 @@
+#main-notification {
+  background: $primary;
+  color: $white;
+  > div {
+    align-items: center;
+  }
+  a {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+  p {
+    flex: 1;
+    margin: 0;
+  }
+}

@@ -1,0 +1,45 @@
+// Typography
+$body-font: 'Fira Sans', sans-serif;
+
+//Color: these are made up right now :)
+$primary: #0bc7b1;
+
+$body-background: #f2f2f2;
+$white: #ffffff;
+$middle-grey: #999999;
+$grey: #666666;
+$light-grey: #d1d1d1;
+$dark-grey: #333333;
+
+$transparent-black: rgba(50,50,50,.1);
+
+$success: #00ff00;
+$warning: #f45d5d;
+
+$slate: #771A49;
+
+$facebook-blue: #415E9B;
+$twitter-blue: #55ACEE;
+
+//Sizes
+$default-box: 32px;
+$half-box: $default-box * .5;
+$double-box: $default-box * 2;
+$quad-box: $default-box * 4;
+$octo-box: $default-box * 8;
+$default-gap: 10px;
+$half-gap: $default-gap * .5;
+$double-gap: $default-gap * 2;
+
+//Border Radii
+$default-border-radius: 3px;
+
+//Timings
+$fast: 50ms;
+$medium: 150ms;
+$slow: 250ms;
+$turtle: 750ms;
+$glacier: 1000ms;
+
+//Fades
+$default-fade: .5;

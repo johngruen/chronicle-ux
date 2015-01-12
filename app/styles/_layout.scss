@@ -1,0 +1,51 @@
+//Primary Content Regions
+#main-header {
+  height: $double-box;
+  margin-bottom: $double-gap;
+}
+
+#main-component-wrapper {
+  flex: 1;
+}
+
+#ux-site-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+}
+
+//Modifiers
+
+.l-fullscreen {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.l-flex {
+  display: flex;
+  &-centered {
+    @extend .l-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &-vertical {
+    @extend .l-flex;
+    flex-direction: column;
+  }
+  &-full {
+    @extend .l-flex-vertical;
+    min-height: 100vh;
+  }
+}
+
+.l-centered {
+  display: block;
+  margin: 0 auto;
+}
+

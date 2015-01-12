@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  &-padded {
+    @extend .container;
+    padding: $default-gap;
+  }
+  &-padded-lr {
+    @extend .container;
+    padding: 0 $default-gap;
+  }
+}
+
+.container-small {
+  width: 520px;
+  margin: 0 auto;
+}
