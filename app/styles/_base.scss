@@ -1,9 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,700,400italic,700italic);
+//@import url(http://fonts.googleapis.com/css?family=Fira+Sans);
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -14,4 +15,15 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.emphatic {
+  font-size: 24px; 
+  font-weight: 100;
+  line-height: 1.4em;
+  border-left: 4px solid $primary;
+  padding: $default-gap;
+  //font-weight: 100;
+  font-style: italic;
+  background: $transparent-black;
 }

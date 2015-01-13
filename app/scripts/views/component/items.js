@@ -5,19 +5,18 @@
 define([
   'jquery',
   'views/base',
-  'stache!templates/items'
+  'stache!templates/component/items'
 ], function ($, BaseView, ItemsTemplate) {
   'use strict';
 
   var ItemsView = BaseView.extend({
     template: ItemsTemplate,
-    className: 'items-page',
     events: {
       'click .icon-button-warn': 'closeItem',
     },
 
     closeItem: function(e) {
-      $(e.target).closest('.item').fadeOut(1000);
+      $(e.target).closest('.item').css('display','none');
     },
 
     afterRender: function() {

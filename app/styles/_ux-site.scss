@@ -1,14 +1,19 @@
 #ux-site {
   margin: 70px 0;
   line-height: 1.4em;
+  section {
+    margin: 0 0 60px 0;
+  }
   .logo {
     background: url(../images/text-logo.png) no-repeat center;
-    background-size: auto 36px;
-    height: 36px;
+    background-size: auto 48px;
+    height: 48px;
     margin: 0 0 50px 0;
   }
   h2 {
-    font-weight: 100;
+    font-size: 36px;
+    font-weight: 200;
     text-align: center;
+    color: $middle-grey;
   }
 }

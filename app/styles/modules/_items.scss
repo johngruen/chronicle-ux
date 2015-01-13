@@ -2,8 +2,8 @@
 .item {
   cursor: pointer;
   display: flex;
+  margin-bottom: $default-gap;
   overflow: hidden;
-  @include is-bs-state-machine();
 }
 
 //generic sub-item properties
@@ -22,7 +22,8 @@
 .item-full {
   background: $white;
   border-radius: $default-border-radius;
-  margin-bottom: $default-gap;
+  @include is-bs-state-machine();
+
 }
 
 // specific types of full item
@@ -50,5 +51,6 @@
 
 //generic compressed item properties
 .item-compressed {
-
+  height: $default-box;
+  background: $white;
 }

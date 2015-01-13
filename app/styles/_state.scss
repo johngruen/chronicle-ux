@@ -31,8 +31,11 @@
 
 @mixin is-scale-state-machine() {
   transition: all $fast;
-  &:active {
+  &:hover {
     transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
   }
 }
 

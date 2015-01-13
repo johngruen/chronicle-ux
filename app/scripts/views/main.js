@@ -8,8 +8,16 @@ define([
   'views/common/main-notification',
   'views/common/main-header',
   'views/common/main-footer',
-  'stache!templates/main',
-], function ($, BaseView, NotificationView, HeaderView, FooterView, MainTemplate) {
+  'views/component/items',
+  'stache!templates/main'
+], function ($,
+            BaseView,
+            NotificationView,
+            HeaderView,
+            FooterView,
+            ItemsView,
+            MainTemplate) {
+  
   'use strict';
 
   var MainView = BaseView.extend({
@@ -20,6 +28,7 @@ define([
       this.assign(this.trackSubview(new NotificationView()), '#main-notification-wrapper');
       this.assign(this.trackSubview(new HeaderView()), '#main-header-wrapper');
       this.assign(this.trackSubview(new FooterView()), '#main-footer-wrapper');
+      this.assign(this.trackSubview(new ItemsView()), '#items-component-wrapper');
     }
   });
 
