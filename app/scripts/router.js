@@ -6,14 +6,16 @@ define([
   'jquery',
   'backbone',
   'views/main',
-  'views/ux-site/ux-site'
-], function ($, Backbone, MainView, UxView) {
+  'views/ux-site/ux-site',
+  'views/component/landing'
+], function ($, Backbone, MainView, UxView, LandingView) {
   'use strict';
 
   var Router = Backbone.Router.extend({
     routes: {
       '': 'showUx',
-      'main': 'showMain'
+      'main': 'showMain',
+      'landing': 'showLanding'
 
     },
 
@@ -23,6 +25,10 @@ define([
 
     showUx: function () {
       this.setStage(new UxView());
+    },
+
+    showLanding: function () {
+      this.setStage(new LandingView());
     },
 
 

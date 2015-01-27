@@ -11,7 +11,8 @@ require.config({
     underscore: '../bower_components/underscore/underscore',
     text: '../bower_components/requirejs-text/text',
     mustache: '../bower_components/mustache/mustache',
-    stache: '../bower_components/requirejs-mustache/stache'
+    stache: '../bower_components/requirejs-mustache/stache',
+    fullpage: '../bower_components/fullpage.js/jquery.fullPage'
   },
   shim: {
     underscore: {
@@ -23,13 +24,17 @@ require.config({
         'jquery'
       ],
       exports: 'Backbone'
-    }
+    },
+    fullpage: {
+      deps: ['jquery'],
+      exports: '$.fn.fullpage'
+    } 
   }
 });
 
 require([
   'backbone',
-  'router'
+  'router',
 ], function (Backbone) {
   Backbone.history.start();
 });
