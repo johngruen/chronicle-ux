@@ -1,9 +1,10 @@
-@import '../bower_components/fullpage.js/jquery.fullPage';
+@import 'modules/fullPage';
 
 @import 'modules/buttons';
 @import 'modules/icon-buttons';
 @import 'modules/container';
 @import 'modules/items';
+@import 'modules/loading';
 
 @import 'modules/main-notification';
 @import 'modules/main-header';

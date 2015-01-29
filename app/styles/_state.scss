@@ -15,18 +15,14 @@
   transition: all 1000ms;
 }
 
-@keyframes fadeOutUp {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.is-pop-in-fade-out {
+  animation: is-pop-in-fade-out;
+  animation-duration: 3s;
 }
 
-.fadeOutUp {
-  animation: fadeOutUp 100ms forwards;
-  //display: none;
+.is-pop-in {
+    animation: is-pop-in forwards;
+    animation-duration: 3s;
 }
 
 @mixin is-scale-state-machine() {
@@ -75,6 +71,46 @@
   &:hover {
     //transform: scale(1.01);
     box-shadow: 0 0 3px $middle-grey;
+  }
+}
+
+@keyframes is-pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(1); 
+  }
+  5% {
+    opacity:1;
+    transform: scale(1.05);
+  }
+  6% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes is-pop-in-fade-out {
+  0% {
+    opacity: 0;
+    transform: scale(1); 
+  }
+  1% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  15% {
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

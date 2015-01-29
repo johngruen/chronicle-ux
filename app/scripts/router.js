@@ -7,15 +7,17 @@ define([
   'backbone',
   'views/main',
   'views/ux-site/ux-site',
-  'views/component/landing'
-], function ($, Backbone, MainView, UxView, LandingView) {
+  'views/component/landing',
+  'views/component/loading'
+], function ($, Backbone, MainView, UxView, LandingView, LoadingView) {
   'use strict';
 
   var Router = Backbone.Router.extend({
     routes: {
       '': 'showUx',
       'main': 'showMain',
-      'landing': 'showLanding'
+      'landing': 'showLanding',
+      'loading': 'showLoading'
 
     },
 
@@ -31,6 +33,10 @@ define([
       this.setStage(new LandingView());
     },
 
+    showLoading: function() {
+      this.setStage(new LoadingView());
+    },
+
 
     setStage: function (view) {
       // Destroy the current view before replacing it
@@ -41,6 +47,11 @@ define([
       this.currentView = view;
 
       $('#stage').html(this.currentView.render().el);
+
+      if(this.currentView.afterInsert) {
+        this.currentView.afterInsert();
+      }
+
     }
   });
 

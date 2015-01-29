@@ -5,7 +5,9 @@ module.exports = function (grunt) {
     files: ['app/styles/*.scss',
     'app/styles/modules/*.scss',
     'app/scripts/templates/*.html',
-    'app/index.html'
+    'app/index.html',
+    'app/scripts/views/**/*.js',
+    'app/scripts/templates/**/*.html'
     ],
     tasks: ['sass','autoprefixer'],
     options: {

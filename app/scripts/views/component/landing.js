@@ -15,9 +15,13 @@ define([
     template: LandingTemplate,
 
     afterRender: function() {
-      var a = new fullpage;
+    },
+
+    afterInsert: function() {
       this.$el.find("#fullpage").fullpage({
-        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000']
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+        navigation: true,
+        navigationPosition: 'right'
       });
     }
   });
