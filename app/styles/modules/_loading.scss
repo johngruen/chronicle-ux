@@ -4,11 +4,24 @@
 }
 
 .loading-element-icon {
-  background: $dark-grey;
-  border-radius: 50%;
+  background-image: url('../images/chronicle-loading-sprite.png');
+  background-size: 500px 100px;
   height: 100px;
   margin: 0 auto;
   width: 100px;
+  &.clock {
+    background-position: 400px 0; 
+  }
+  &.search {
+    background-position: 300px 0; 
+  }
+  &.private {
+    background-position: 200px 0; 
+  }
+  &.feedback {
+    background-position: 200px 0; 
+  }
+
 }
 
 .loading-element-text {
@@ -24,4 +37,15 @@
   position: absolute;
 }
 
-
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .loading-element-icon {
+  background-image: url('../images/chronicle-loading-sprite@2x.png');
+  }
+}
