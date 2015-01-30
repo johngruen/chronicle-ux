@@ -39,6 +39,12 @@
     flex-direction: column;
     &-centered{
       @extend .l-flex-vertical;
+      min-height:100%;
+      align-items: center;
+      justify-content: center;
+    }
+    &-full {
+       @extend .l-flex-vertical;
       min-height:100vh;
       align-items: center;
       justify-content: center;
@@ -48,9 +54,23 @@
     @extend .l-flex-vertical;
     min-height: 100vh;
   }
+  &-two-column {
+    width: 768px;
+    display: flex;
+    .column-1 {
+      width: 50%;
+    }
+    .column-2 {
+      width: 50%;
+    }
+  }
 }
 
 .l-centered {
   display: block;
   margin: 0 auto $default-gap;
+}
+
+.l-text-centered {
+  text-align: center;
 }

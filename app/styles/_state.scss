@@ -114,3 +114,58 @@
   }
 }
 
+.is-move-delayed-fade {
+  animation: is-move-delayed-fade forwards;
+  animation-duration: 2s;
+}
+
+.is-delayed-fade {
+  animation: is-delayed-fade forwards;
+  animation-duration: 2s;
+}
+
+.is-delayed-fade-1 {
+  animation: is-delayed-fade forwards;
+  animation-duration: 2.3s;
+}
+
+.is-delayed-fade-2 {
+  animation: is-delayed-fade forwards;
+  animation-duration: 2.6s;
+}
+
+.is-delayed-fade-3 {
+  animation: is-delayed-fade forwards;
+  animation-duration: 2.9s;
+}
+
+.is-delayed-fade-4 {
+  animation: is-delayed-fade forwards;
+  animation-duration: 3.2s;
+}
+
+@keyframes is-delayed-fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes is-move-delayed-fade{
+  50% {
+    top: 0;
+    left: 0;
+    background: #f2f2f2;
+  }
+  100% {
+    background: #fff;
+    top: 0;
+    left: 0;
+  }
+}
+

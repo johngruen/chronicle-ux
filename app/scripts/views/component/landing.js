@@ -21,9 +21,25 @@ define([
     },
 
     afterInsert: function() {
+      var that = this;
       this.$("#fullpage").fullpage({
         navigation: true,
-        navigationPosition: 'right'
+        navigationPosition: 'right',
+          onLeave: function(index, nextIndex, direction){
+            if(nextIndex === 2) {
+            setTimeout(function(){
+              that.$('.round').addClass('is-delayed-fade');
+              that.$('.square-holder').addClass('is-move-delayed-fade');
+            },1000)
+          }
+          else if(nextIndex === 3) {
+            that.$('.secure').addClass('is-delayed-fade');
+            that.$('.plus').addClass('is-delayed-fade-1');
+            that.$('.private').addClass('is-delayed-fade-2');
+            that.$('.equal').addClass('is-delayed-fade-3');
+            that.$('.logo').addClass('is-delayed-fade-4');
+          }
+        }
       });
     },
 

@@ -7,7 +7,6 @@
     left: -5px;
 }
 
-
 #fullpage {
   input {
     border-radius: 0;
@@ -19,4 +18,111 @@
     width: 320px;
         margin: $double-gap 0;
   }
+
+  .round {
+    width: 80%;
+    height: 40px;
+    background: $white;
+    border: 1px solid $light-grey;
+    border-radius: 20px;
+    margin: 0 auto 10px auto;
+    opacity: 0;
+  }
+
+  .square-holder {
+    margin: 0 0 10px 0;
+    position: relative;
+    &[data-index='0'] {
+      left: 200px;
+      top: -50px;
+    }
+    &[data-index='1'] {
+      left: -60px;
+      top: -120px;
+    }
+    &[data-index='2'] {
+      left: -50px;
+      top: -100px;
+    }
+    &[data-index='3'] {
+      left: 50px;
+      top: -50px;
+    }
+    &[data-index='4'] {
+      left: 190px;
+      top: -150px;
+    }
+    &[data-index='5'] {
+      left: 250px;
+      top: 50px;
+    }
+    &[data-index='6'] {
+      left: -40px;
+      top: 20px;
+    }
+    &[data-index='7'] {
+      left: 40px;
+      top: -120px;
+    }
+    &[data-index='8'] {
+      left: 70px;
+      top: -60px;
+    }
+  }
+  .square {
+    background: $light-grey;
+    width: 100px;
+    height: 100px;
+  }
+
+  .small-square {
+    background: $light-grey;
+    width: 25px;
+    height: 25px;
+    margin: 0 0 10px 0;
+  }
 }
+
+.secure-animation {
+  display: flex;
+  width: 508px;
+  height: 120px; 
+  margin: 0 0 $quad-gap;
+  > div {
+    opacity: 0;
+    padding: $double-gap;
+    background-position: center center;
+  }
+  .secure {
+    background-image: url(../images/chronicle-secure.png);
+    width: 120px;
+    height: 120px;
+  }
+  .private {
+    background-image: url(../images/chronicle-private.png);
+    width: 140px;
+    height: 120px;
+  }
+  .logo {
+    background-image: url(../images/chronicle-logo.png);
+    width: 140px;
+    height: 120px;
+  }
+  .plus {
+    background-image: url(../images/chronicle-plus.png);
+    width: 89px;
+    height: 120px;
+  }
+  .equal {
+    background-image: url(../images/chronicle-equal.png);
+    width: 89px;
+    height: 120px;
+  }
+}
+
+
+
+
+
+
+
