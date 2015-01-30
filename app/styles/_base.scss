@@ -27,3 +27,18 @@ a {
   font-style: italic;
   background: $transparent-black;
 }
+
+h1.jumbo {
+  font-size: 72px;
+  margin: 0;
+}
+
+h2.jumbo {
+  font-size: 48px;
+  margin: 0 0 $double-gap 0;
+}
+
+p.jumbo {
+  font-size: 24px;
+  margin: 0 0 $double-gap 0;
+}

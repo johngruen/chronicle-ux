@@ -3,13 +3,14 @@
   border: none;
   min-width: $double-box;
   padding: 0 $default-gap;
+  border-radius: $default-border-radius;
   @include is-scale-state-machine();
 }
 
 .button-big {
   min-height: $double-box;
   font-size: 24px;
-  padding: 0 $double-gap;
+  padding: 0 $octo-gap;
 }
 
 .button-group {
@@ -29,4 +30,10 @@
 
 .button-primary {
   @include is-bg-state-machine($primary, true);  
+}
+
+.button-border {
+  border: 2px solid $dark-grey;
+  color: $dark-grey;
+  border-radius: $double-border-radius;
 }

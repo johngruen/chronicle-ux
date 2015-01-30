@@ -13,17 +13,25 @@ define([
 
   var LandingView = BaseView.extend({
     template: LandingTemplate,
+    events: {
+      'click .skip-intro':'skipIntro'
+    },
 
     afterRender: function() {
     },
 
     afterInsert: function() {
-      this.$el.find("#fullpage").fullpage({
-        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],
+      this.$("#fullpage").fullpage({
         navigation: true,
         navigationPosition: 'right'
       });
+    },
+
+    skipIntro: function() {
+      console.log('blorb');
+      $.fn.fullpage.moveTo(4, 0);
     }
+
   });
 
   return LandingView;

@@ -1,12 +1,24 @@
 #main-notification {
-  background: $primary;
-  color: $white;
+  &.dismissable {
+    background: $primary;
+    color: $white;
+    a {
+      color: #fff !important;
+      text-decoration: underline;
+    }
+  }
+  &.static {
+    position: absolute;
+    width: 100%;
+    background: $white;
+    border-bottom: 2px solid $light-grey;
+    p {
+      text-align: center;
+      margin: $double-gap 0;
+    }
+  }
   > div {
     align-items: center;
-  }
-  a {
-    color: #fff !important;
-    text-decoration: underline;
   }
   p {
     flex: 1;
